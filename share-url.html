@@ -38,13 +38,14 @@ Element to share the current url
         border: 1px solid black;
         border-radius: 25px;
         box-shadow: 2px 2px 2px #CCC;
+        border-color: var(--share-url-border-color);
       }
     </style>
 
     <span id="shareLink" class="shareIcon-link"><i class="fa fa-share-alt shareIcon" aria-hidden="true"></i></span>
 
     <div id="shareList" class="hidden">
-      <template is="dom-repeat" items="{{networks}}" class="{{toggleClass}}">
+      <template is="dom-repeat" items="{{newNetworks}}" class="{{toggleClass}}">
         <a href="{{item.share_url}}{{currentUrl}}" class="shareIcon-link" target="_blank" style="color:{{item.color}}"><i class$="fa fa-{{item.key}}" aria-hidden="true"></i></a>
       </template>
     </div>
@@ -111,6 +112,7 @@ Element to share the current url
             },
             ready: function() {
                 console.log('share-url ready');
+                console.log(this.selectedNetworks);
                 console.log(this.networks);
                 for (key in this.selectedNetworks) {
                     this.newNetworks.push(this.networks[key]);
