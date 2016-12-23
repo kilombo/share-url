@@ -14,12 +14,6 @@ Element to share the current url
       :host {
         display: block;
       }
-      .hidden .shareIcon-link{
-        opacity: 0;
-      }
-      .shareIcon-link.shown{
-        display: block;
-      }
       #shareList{
         display: inline-block;
       }
@@ -42,7 +36,11 @@ Element to share the current url
         transition: all .3s ease;
         opacity: 1;
       }
+      .hidden .shareIcon-link{
+        opacity: 0;
+      }
     </style>
+    <span class="shareIcon-text">{{shareText}}</span>
     <span id="shareLink" class="shareIcon-link"><i class="fa fa-share-alt shareIcon" aria-hidden="true"></i></span>
 
     <div id="shareList" class="hidden">
@@ -104,6 +102,10 @@ Element to share the current url
                     value: function() {
                         return [];
                     }
+                },
+                shareText:{
+                    type: String,
+                    notify:true
                 },
                 listShown: {
                     type: Boolean,
