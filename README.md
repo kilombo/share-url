@@ -1,5 +1,6 @@
 # \<share-url\>
-[![license](https://img.shields.io/github/license/cluttered-components/online-status-icon.svg)](https://raw.githubusercontent.com/cluttered-components/online-status-icon/master/LICENSE)
+[![license](https://img.shields.io/github/license/cluttered-components/share-url.svg)](https://raw.githubusercontent.com/cluttered-components/share-url/master/LICENSE)
+[![Build Status](https://travis-ci.org/cluttered-components/share-url.svg?branch=master)](https://travis-ci.org/cluttered-components/share-url)
 [![Published on webcomponents.org](https://img.shields.io/badge/webcomponents.org-published-blue.svg)](https://beta.webcomponents.org/element/owner/share-url)
 
 Element to share the current url
